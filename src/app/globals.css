@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/* Pretendard 폰트 */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  /* ========================================
+     PhotoPick Color System
+     ========================================
+     기본: 파랑 (브랜드)
+     긍정: 그린 (부드러운 톤)
+     부정: 레드 (부드러운 톤)
+     ======================================== */
+
+  /* Primary - Brand Blue (원색 허용) */
+  --color-primary: #0152CC;
+  --color-primary-dark: #003D99;
+  --color-primary-light: #3D7FE6;
+  --color-primary-50: #E6F0FF;
+  --color-primary-100: #CCE0FF;
+
+  /* Secondary - Light Blue */
+  --color-secondary: #4A90D9;
+  --color-secondary-dark: #2E6EB8;
+  --color-secondary-light: #7AB5E8;
+
+  /* Positive - Soft Green (긍정적 피드백) */
+  --color-positive: #4ADE80;
+  --color-positive-dark: #22C55E;
+  --color-positive-light: #86EFAC;
+  --color-positive-bg: #F0FDF4;
+
+  /* Negative - Soft Red (부정적/할인/경고) */
+  --color-negative: #F87171;
+  --color-negative-dark: #EF4444;
+  --color-negative-light: #FCA5A5;
+  --color-negative-bg: #FEF2F2;
+
+  /* Discount - Uses Negative color */
+  --color-discount: #F87171;
+  --color-discount-dark: #EF4444;
+
+  /* Neutrals */
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+
+  /* Semantic Colors */
+  --color-success: #4ADE80;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+  --color-info: #60A5FA;
+
+  /* Background */
+  --background: #FFFFFF;
+  --foreground: #212121;
+}
+
+@theme inline {
+  /* Custom Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-secondary-light: var(--color-secondary-light);
+
+  /* Positive (Green) - 긍정적 피드백 */
+  --color-positive: var(--color-positive);
+  --color-positive-dark: var(--color-positive-dark);
+  --color-positive-light: var(--color-positive-light);
+  --color-positive-bg: var(--color-positive-bg);
+
+  /* Negative (Red) - 부정적/할인 */
+  --color-negative: var(--color-negative);
+  --color-negative-dark: var(--color-negative-dark);
+  --color-negative-light: var(--color-negative-light);
+  --color-negative-bg: var(--color-negative-bg);
+
+  --color-discount: var(--color-discount);
+  --color-discount-dark: var(--color-discount-dark);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Section backgrounds - Yanolja style */
+  --color-section-blue: #F0F7FF;
+  --color-section-gray: #F5F5F5;
+
+  /* Font */
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Safe area for mobile */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
