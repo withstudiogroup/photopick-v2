@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // SSR 모드 - API 라우트가 있어서 static export 불가
-  basePath: '/photopick-v2',
+  // 별도 도메인(photopick-v2.withstudiogroup.com)으로 배포하므로 basePath 불필요
   images: {
     unoptimized: true,
     remotePatterns: [
