@@ -1,10 +1,4 @@
 name = "photopick-v2"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
-
-[vars]
-NODE_VERSION = "18"
-
-# Static assets configuration
-[site]
-bucket = ".vercel/output/static"
+pages_build_output_dir = ".vercel/output/static"
