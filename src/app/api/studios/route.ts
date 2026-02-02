@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { NextResponse } from 'next/server';
 import { getStudios, searchStudios, getStudiosByCategory } from '@/lib/supabase/queries';
 
