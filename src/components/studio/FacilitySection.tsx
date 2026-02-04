@@ -15,6 +15,7 @@ import {
   Accessibility,
   Clock,
   CalendarOff,
+  type LucideIcon,
 } from 'lucide-react';
 import { Studio } from '@/types';
 
@@ -22,7 +23,7 @@ interface FacilitySectionProps {
   studio: Studio;
 }
 
-const facilityIcons: Record<string, { icon: React.ComponentType<{ size?: number; className?: string }> }> = {
+const facilityIcons: Record<string, { icon: LucideIcon }> = {
   '자연광': { icon: Sun },
   '인공조명': { icon: Lightbulb },
   '헤어메이크업': { icon: Scissors },

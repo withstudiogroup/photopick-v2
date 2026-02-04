@@ -17,10 +17,11 @@ import {
   Star,
   Music,
   Dumbbell,
+  type LucideIcon,
 } from 'lucide-react';
 import type { Category } from '@/types';
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   'id-card': IdCard,
   'camera': Camera,
   'user': User,

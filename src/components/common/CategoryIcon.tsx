@@ -11,6 +11,7 @@ import {
   PawPrint,
   HeartHandshake,
   Smile,
+  type LucideIcon,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Category } from '@/types';
@@ -21,7 +22,7 @@ interface CategoryIconProps {
   className?: string;
 }
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   'id-card': IdCard,
   'user': User,
   'users': Users,

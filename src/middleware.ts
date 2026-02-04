@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 
-export async function middleware(request: NextRequest) {
+export async function middleware(_request: NextRequest) {
   // 임시로 모든 요청 통과
   return NextResponse.next();
 }

@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Pretendard 폰트 */
 @font-face {
@@ -87,44 +89,6 @@
   /* Background */
   --background: #FFFFFF;
   --foreground: #212121;
-}
-
-@theme inline {
-  /* Custom Colors */
-  --color-primary: var(--color-primary);
-  --color-primary-dark: var(--color-primary-dark);
-  --color-primary-light: var(--color-primary-light);
-  --color-primary-50: var(--color-primary-50);
-  --color-primary-100: var(--color-primary-100);
-
-  --color-secondary: var(--color-secondary);
-  --color-secondary-dark: var(--color-secondary-dark);
-  --color-secondary-light: var(--color-secondary-light);
-
-  /* Positive (Green) - 긍정적 피드백 */
-  --color-positive: var(--color-positive);
-  --color-positive-dark: var(--color-positive-dark);
-  --color-positive-light: var(--color-positive-light);
-  --color-positive-bg: var(--color-positive-bg);
-
-  /* Negative (Red) - 부정적/할인 */
-  --color-negative: var(--color-negative);
-  --color-negative-dark: var(--color-negative-dark);
-  --color-negative-light: var(--color-negative-light);
-  --color-negative-bg: var(--color-negative-bg);
-
-  --color-discount: var(--color-discount);
-  --color-discount-dark: var(--color-discount-dark);
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Section backgrounds - Yanolja style */
-  --color-section-blue: #F0F7FF;
-  --color-section-gray: #F5F5F5;
-
-  /* Font */
-  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 * {
